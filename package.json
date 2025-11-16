@@ -1,0 +1,74 @@
+{
+  "name": "video-downloader",
+  "version": "1.0.0",
+  "description": "Video Downloader by Chris",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder",
+    "build:win": "electron-builder --win",
+    "build:mac": "electron-builder --mac",
+    "build:linux": "electron-builder --linux",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "build": {
+    "appId": "anihaven.site",
+    "productName": "Vid DL",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "renderer.js",
+      "index.html",
+      "style.css",
+      "menubar.html",
+      "menubar-style.css",
+      "menubar-renderer.js",
+      "config.json",
+      "app_icon.ico",
+      "icon.png",
+      "icon.icns",
+      "yt-dlp.exe",
+      "yt-dlp"
+    ],
+    "asarUnpack": [
+      "node_modules/ffmpeg-static/**/*"
+    ],
+    "extraResources": [
+      {
+        "from": "icon.png",
+        "to": "icon.png"
+      }
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "app_icon.ico",
+      "sign": null
+    },
+    "mac": {
+      "target": "dmg",
+      "icon": "icon.icns"
+    },
+    "linux": {
+      "target": "AppImage",
+      "icon": "app_icon.ico",
+      "category": "Utility"
+    }
+  },
+  "keywords": [
+    "youtube",
+    "downloader",
+    "electron"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^27.3.11",
+    "electron-builder": "^24.6.4"
+  },
+  "dependencies": {
+    "ffmpeg-static": "^5.2.0"
+  }
+}

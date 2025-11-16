@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video DL ♡</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Custom Titlebar -->
+    <div class="titlebar">
+        <div class="titlebar-controls">
+            <button class="titlebar-button minimize" id="minimizeBtn">
+                <svg width="10" height="10" viewBox="0 0 10 10">
+                    <path d="M0,5 L10,5" stroke="currentColor" stroke-width="1"/>
+                </svg>
+            </button>
+            <button class="titlebar-button close" id="closeBtn">
+                <svg width="10" height="10" viewBox="0 0 10 10">
+                    <path d="M0,0 L10,10 M10,0 L0,10" stroke="currentColor" stroke-width="1"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <div class="bg-overlay" id="bgOverlay"></div>
+    
+    <!-- Custom Notification -->
+    <div class="notification" id="notification">
+        <div class="notification-content">
+            <div class="notification-icon">♡</div>
+            <div class="notification-text" id="notificationText"></div>
+            <button class="notification-close" id="notificationClose">×</button>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="header">
+            <h1>Video DL ♡</h1>
+            <p class="subtitle">download videos & audio in any quality</p>
+        </div>
+
+        <div class="main-card">
+            <!-- Tab Navigation -->
+            <div class="tab-nav">
+                <button class="tab-btn active" data-tab="download">download</button>
+                <button class="tab-btn" data-tab="history">history</button>
+            </div>
+
+            <!-- Download Tab -->
+            <div class="tab-content active" id="download-tab">
+                <div class="input-group">
+                    <label>video url</label>
+                    <input type="text" id="urlInput" placeholder="url" class="url-input">
+                </div>
+
+                <div class="input-group">
+                    <label>file name (optional)</label>
+                    <input type="text" id="fileNameInput" placeholder="name (opt)" class="url-input">
+                </div>
+
+                <div class="input-group">
+                    <label>format</label>
+                    <div class="toggle-container">
+                        <span class="toggle-label" id="toggleLabelLeft">video</span>
+                        <div class="toggle-switch" id="formatToggle">
+                            <input type="checkbox" id="formatCheckbox">
+                            <span class="toggle-slider"></span>
+                        </div>
+                        <span class="toggle-label" id="toggleLabelRight">audio</span>
+                    </div>
+                </div>
+
+                <div class="input-group" id="qualityGroup">
+                    <label id="qualityLabel">quality</label>
+                    <select id="qualitySelect" class="quality-select">
+                        <option value="best">Default</option>
+                        <option value="2160p">2160p</option>
+                        <option value="1440p">1440p</option>
+                        <option value="1080p">1080p</option>
+                        <option value="720p">720p</option>
+                        <option value="480p">480p</option>
+                        <option value="360p">360p</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label>save to</label>
+                    <div class="path-group">
+                        <input type="text" id="pathInput" readonly class="path-input">
+                        <button class="browse-btn" id="browseBtn">browse</button>
+                    </div>
+                </div>
+
+                <div class="progress-container" id="progressContainer">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <p class="status-text" id="statusText">ready to download ♡</p>
+                </div>
+
+                <button class="download-btn" id="downloadBtn">
+                    <span>download ♡</span>
+                </button>
+            </div>
+
+            <!-- History Tab -->
+            <div class="tab-content" id="history-tab">
+                <div class="history-header">
+                    <h3>download history</h3>
+                    <button class="clear-history-btn" id="clearHistoryBtn">clear all</button>
+                </div>
+                <div class="history-list" id="historyList">
+                    <p class="empty-history">no downloads yet ♡</p>
+                </div>
+                <div class="history-pagination" id="historyPagination"></div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p><a href="https://anihaven.site" target="_blank" rel="noopener noreferrer">By Chris ♡</a></p>
+            <p>DM @cwuery on Discord for support</p>
+        </div>
+    </div>
+
+    <script src="renderer.js"></script>
+</body>
+</html>

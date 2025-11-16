@@ -1,0 +1,23 @@
+{
+  "appearance": {
+    "backgroundImage": "",
+    "backgroundColor": "linear-gradient(135deg, #f5e6f0 0%, #e8d5e8 100%)",
+    "cardColor": "rgba(254, 247, 252, 0.85)",
+    "primaryColor": "#d4a5c4",
+    "secondaryColor": "#e8c9dd",
+    "textColor": "#8b6f7d",
+    "accentColor": "#c89bb8"
+  },
+  "window": {
+    "width": 520,
+    "height": 780,
+    "resizable": false,
+    "icon": "app_icon.ico",
+    "titleBarColor": "#c8b4c8"
+  },
+  "downloads": {
+    "defaultPath": "",
+    "videoQualities": ["2160p", "1440p", "1080p", "720p", "480p", "360p"],
+    "audioQualities": ["320kbps", "256kbps", "192kbps", "128kbps"]
+  }
+}

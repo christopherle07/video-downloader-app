@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick DL ♡</title>
+    <link rel="stylesheet" href="menubar-style.css">
+</head>
+<body>
+    <div class="bg-overlay" id="bgOverlay"></div>
+    
+    <!-- Custom Notification -->
+    <div class="notification" id="notification">
+        <div class="notification-content">
+            <div class="notification-icon">♡</div>
+            <div class="notification-text" id="notificationText"></div>
+            <button class="notification-close" id="notificationClose">×</button>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="header">
+            <h1>Quick DL ♡</h1>
+            <button class="close-menubar-btn" id="closeMenubarBtn">×</button>
+        </div>
+
+        <div class="main-card">
+            <div class="input-group">
+                <label>video url</label>
+                <input type="text" id="urlInput" placeholder="paste url..." class="url-input">
+            </div>
+
+            <div class="input-group">
+                <label>format</label>
+                <div class="toggle-container">
+                    <span class="toggle-label" id="toggleLabelLeft">video</span>
+                    <div class="toggle-switch" id="formatToggle">
+                        <input type="checkbox" id="formatCheckbox">
+                        <span class="toggle-slider"></span>
+                    </div>
+                    <span class="toggle-label" id="toggleLabelRight">audio</span>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label>save to</label>
+                <div class="path-group">
+                    <input type="text" id="pathInput" readonly class="path-input">
+                    <button class="browse-btn" id="browseBtn">browse</button>
+                </div>
+            </div>
+
+            <div class="progress-container" id="progressContainer">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <p class="status-text" id="statusText">ready ♡</p>
+            </div>
+
+            <button class="download-btn" id="downloadBtn">
+                <span>download ♡</span>
+            </button>
+        </div>
+
+        <div class="footer">
+            <button class="open-main-btn" id="openMainBtn">open full app</button>
+        </div>
+    </div>
+
+    <script src="menubar-renderer.js"></script>
+</body>
+</html>
