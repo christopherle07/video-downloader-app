@@ -45,6 +45,7 @@
             <div class="tab-nav">
                 <button class="tab-btn active" data-tab="download">download</button>
                 <button class="tab-btn" data-tab="history">history</button>
+                <button class="tab-btn" data-tab="settings">settings</button>
             </div>
 
             <!-- Download Tab -->
@@ -114,6 +115,73 @@
                     <p class="empty-history">no downloads yet ♡</p>
                 </div>
                 <div class="history-pagination" id="historyPagination"></div>
+            </div>
+
+            <!-- Settings Tab -->
+            <div class="tab-content" id="settings-tab">
+                <div class="settings-header">
+                    <h3>theme customization</h3>
+                    <button class="reset-theme-btn" id="resetThemeBtn">reset to default</button>
+                </div>
+                
+                <div class="settings-content">
+                    <div class="color-group">
+                        <label>primary color</label>
+                        <div class="color-input-wrapper">
+                            <input type="color" id="primaryColorInput" class="color-input">
+                            <input type="text" id="primaryColorText" class="color-text-input" maxlength="7">
+                        </div>
+                    </div>
+
+                    <div class="color-group">
+                        <label>secondary color</label>
+                        <div class="color-input-wrapper">
+                            <input type="color" id="secondaryColorInput" class="color-input">
+                            <input type="text" id="secondaryColorText" class="color-text-input" maxlength="7">
+                        </div>
+                    </div>
+
+                    <div class="color-group">
+                        <label>accent color</label>
+                        <div class="color-input-wrapper">
+                            <input type="color" id="accentColorInput" class="color-input">
+                            <input type="text" id="accentColorText" class="color-text-input" maxlength="7">
+                        </div>
+                    </div>
+
+                    <div class="color-group">
+                        <label>text color</label>
+                        <div class="color-input-wrapper">
+                            <input type="color" id="textColorInput" class="color-input">
+                            <input type="text" id="textColorText" class="color-text-input" maxlength="7">
+                        </div>
+                    </div>
+
+                    <div class="color-group">
+                        <label>card background</label>
+                        <div class="color-input-wrapper">
+                            <input type="color" id="cardColorInput" class="color-input">
+                            <input type="text" id="cardColorText" class="color-text-input" maxlength="7">
+                        </div>
+                        <div class="opacity-slider-wrapper">
+                            <label class="opacity-label">opacity</label>
+                            <input type="range" id="cardOpacityInput" class="opacity-slider" min="0" max="100" value="85">
+                            <span class="opacity-value" id="cardOpacityValue">85%</span>
+                        </div>
+                    </div>
+
+                    <div class="theme-presets">
+                        <label>quick presets</label>
+                        <div class="preset-buttons">
+                            <button class="preset-btn" data-preset="default">default</button>
+                            <button class="preset-btn" data-preset="lavender">lavender</button>
+                            <button class="preset-btn" data-preset="mint">mint</button>
+                            <button class="preset-btn" data-preset="peach">peach</button>
+                            <button class="preset-btn" data-preset="ocean">ocean</button>
+                            <button class="preset-btn" data-preset="sunset">sunset</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
